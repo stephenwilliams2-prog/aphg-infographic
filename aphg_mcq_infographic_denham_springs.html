@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mastering the AP Human Geography MCQ Exam</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink:#004E89;    /* deep blue */
+      --sky:#0077B6;    /* mid blue */
+      --aqua:#48CAE4;   /* accent */
+      --foam:#ADE8F4;   /* card bg */
+      --ice:#CAF0F8;    /* page bg */
+    }
+    html, body { height: 100%; }
+    body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; background-color: var(--ice); }
+    /* Keep charts/cards nicely sized for print */
+    @media print {
+      body { background: white; }
+      .page { box-shadow: none !important; }
+      .no-print { display: none !important; }
+      .print-break { break-inside: avoid; }
+    }
+    /* Chart containers */
+    .chart-container { position: relative; width: 100%; max-width: 320px; height: 320px; margin-left: auto; margin-right: auto; }
+  </style>
+</head>
+<body class="text-gray-800">
+  <!-- Toolbar -->
+  <div class="no-print sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between gap-2">
+      <p class="text-sm md:text-base text-[var(--ink)] font-semibold">APHG • Denham Springs • MCQ Infographic</p>
+      <div class="flex items-center gap-2">
+        <button id="downloadPng" class="px-3 py-1.5 rounded-xl text-sm font-semibold bg-[var(--ink)] text-white hover:bg-[color-mix(in_oklab,var(--ink),white_10%)] transition">Download PNG</button>
+        <button onclick="window.print()" class="px-3 py-1.5 rounded-xl text-sm font-semibold border border-[var(--ink)] text-[var(--ink)] hover:bg-[var(--foam)] transition">Print</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page -->
+  <main id="infographic" class="page max-w-6xl mx-auto p-4 md:p-8">
+
+    <!-- Header -->
+    <header class="text-center mb-10 md:mb-12 print-break">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-[var(--ink)] mb-3">🗺️ Mastering the APHG Multiple‑Choice Exam</h1>
+      <p class="text-lg md:text-xl text-[var(--sky)]">Your strategic guide to thinking like a geographer and acing the MCQ section.</p>
+      <p class="sr-only">Infographic includes exam structure, four core strategies, stimulus decoding, concept tactics, and final reminders.</p>
+    </header>
+
+    <!-- Exam Structure -->
+    <section id="exam-structure" class="mb-12 md:mb-16 print-break" aria-labelledby="exam-structure-title">
+      <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <h2 id="exam-structure-title" class="text-2xl md:text-3xl font-bold text-center text-[var(--ink)] mb-6">Exam Structure & Success Mindset</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+          <div class="bg-[var(--foam)] p-6 rounded-xl">
+            <p class="text-5xl font-black text-[var(--ink)]" aria-hidden="true">60</p>
+            <p class="font-semibold text-[var(--sky)]">Questions</p>
+          </div>
+          <div class="bg-[var(--foam)] p-6 rounded-xl">
+            <p class="text-5xl font-black text-[var(--ink)]" aria-hidden="true">60</p>
+            <p class="font-semibold text-[var(--sky)]">Minutes</p>
+          </div>
+          <div class="bg-[var(--foam)] p-6 rounded-xl">
+            <p class="text-5xl font-black text-[var(--ink)]" aria-hidden="true">50%</p>
+            <p class="font-semibold text-[var(--sky)]">of Total Score</p>
+          </div>
+        </div>
+        <div class="mt-8 text-center">
+          <p class="text-lg text-[var(--sky)]"><span class="font-bold text-[var(--ink)]">The biggest mistake?</span> Pure memorization. <span class="font-bold text-[var(--ink)]">The key to success?</span> Geographical reasoning, pattern recognition, and strategic thinking.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Four -->
+    <section id="core-four" class="mb-12 md:mb-16 print-break" aria-labelledby="core-four-title">
+      <h2 id="core-four-title" class="text-3xl font-bold text-center text-[var(--ink)] mb-8">The Core Four: Universal Strategies</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <article class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+          <div class="text-5xl mb-4" aria-hidden="true">📖</div>
+          <h3 class="text-xl font-bold text-[var(--ink)] mb-2">1. Read the Question—Twice</h3>
+          <p class="text-[var(--sky)]">Underline key vocabulary, task verbs, and concepts. This forces your brain to slow down and process exactly what is being asked.</p>
+        </article>
+        <article class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center">
+          <div class="text-5xl mb-4" aria-hidden="true">👀</div>
+          <h3 class="text-xl font-bold text-[var(--ink)] mb-2">2. Read All Five Answer Choices</h3>
+          <p class="text-[var(--sky)]">Don’t commit until you’ve evaluated all options. Watch for plausible-sounding distractors built on common misconceptions.</p>
+        </article>
+        <article class="bg-white rounded-2xl shadow-lg p-6 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+          <div class="text-center md:text-left">
+            <div class="text-5xl mb-4 text-center" aria-hidden="true">❌</div>
+            <h3 class="text-xl font-bold text-[var(--ink)] mb-2 text-center">3. Use the Process of Elimination (P.O.E.)</h3>
+            <p class="text-[var(--sky)]">Cross out incorrect options. Knock out two, and your odds jump from 20% to 50%—so you can focus on the best two.</p>
+          </div>
+          <div class="chart-container" role="img" aria-label="Donut chart showing 50% success chance when two options eliminated versus 50% incorrect.">
+            <canvas id="poeChart"></canvas>
+          </div>
+        </article>
+        <article class="bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center text-center md:col-span-2">
+          <div class="text-5xl mb-4" aria-hidden="true">⭐</div>
+          <h3 class="text-xl font-bold text-[var(--ink)] mb-2">4. Skip, Star, and Return</h3>
+          <p class="text-[var(--sky)]">If a question stumps you, circle it and move on. Preserve time and confidence for the ones you can answer. Always guess at the end—no penalty.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Stimulus Strategy -->
+    <section id="stimulus-questions" class="mb-12 md:mb-16 print-break" aria-labelledby="stimulus-title">
+      <h2 id="stimulus-title" class="text-3xl font-bold text-center text-[var(--ink)] mb-8">Decoding the Data: 3‑Step Approach to Stimulus Questions</h2>
+      <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <div class="flex flex-col md:flex-row justify-around items-center gap-6">
+          <div class="flex-1 text-center p-4 bg-[var(--foam)] rounded-xl">
+            <p class="text-3xl font-extrabold text-[var(--ink)] mb-1">Step 1</p>
+            <h3 class="text-lg md:text-xl font-semibold text-[var(--sky)] mb-2">Analyze the Stimulus First</h3>
+            <p class="text-sm text-[var(--ink)]">Check title, legend, and source. Identify scale and look for patterns before reading the stem.</p>
+          </div>
+          <div class="text-4xl font-bold text-[var(--sky)] transform rotate-90 md:rotate-0" aria-hidden="true">→</div>
+          <div class="flex-1 text-center p-4 bg-[var(--foam)] rounded-xl">
+            <p class="text-3xl font-extrabold text-[var(--ink)] mb-1">Step 2</p>
+            <h3 class="text-lg md:text-xl font-semibold text-[var(--sky)] mb-2">Translate the Question</h3>
+            <p class="text-sm text-[var(--ink)]">Underline key terms. Ask: Which APHG concept is tested? (e.g., Functional Region, Distance Decay.)</p>
+          </div>
+          <div class="text-4xl font-bold text-[var(--sky)] transform rotate-90 md:rotate-0" aria-hidden="true">→</div>
+          <div class="flex-1 text-center p-4 bg-[var(--foam)] rounded-xl">
+            <p class="text-3xl font-extrabold text-[var(--ink)] mb-1">Step 3</p>
+            <h3 class="text-lg md:text-xl font-semibold text-[var(--sky)] mb-2">Connect & Eliminate</h3>
+            <p class="text-sm text-[var(--ink)]">Use the data to toss answers that contradict the evidence. Keep the one that’s correct <em>and</em> supported.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Concepts Strategy -->
+    <section id="concept-questions" class="mb-12 md:mb-16 print-break" aria-labelledby="concept-title">
+      <h2 id="concept-title" class="text-3xl font-bold text-center text-[var(--ink)] mb-8">Tackling the Abstract: Concept‑Based Questions</h2>
+      <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8 mb-8">
+        <h3 class="text-2xl font-bold text-center text-[var(--ink)] mb-6">“Hall of Fame” Mental Shortcuts</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="border-2 border-[var(--aqua)] rounded-xl p-4 text-center">
+            <h4 class="font-bold text-[var(--sky)]">John Snow's Cholera Map</h4>
+            <p class="text-sm text-[var(--ink)]">Tests: Medical Geography, Nature–Society link.</p>
+          </div>
+          <div class="border-2 border-[var(--aqua)] rounded-xl p-4 text-center">
+            <h4 class="font-bold text-[var(--sky)]">Thomas Malthus</h4>
+            <p class="text-sm text-[var(--ink)]">Tests: Population vs. food supply relationship.</p>
+          </div>
+          <div class="border-2 border-[var(--aqua)] rounded-xl p-4 text-center">
+            <h4 class="font-bold text-[var(--sky)]">Determinism vs. Possibilism</h4>
+            <p class="text-sm text-[var(--ink)]">Tests: Human–Environment Interaction.</p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <h3 class="text-2xl font-bold text-center text-[var(--ink)] mb-6">Apply Broad Patterns to Specific Cases</h3>
+        <p class="text-center text-[var(--sky)] mb-4">Unfamiliar place? Don’t panic—the item likely wants the general principle.</p>
+        <div class="text-center p-4 bg-[var(--foam)] rounded-xl">
+          <p class="font-bold text-[var(--sky)]">Strategy: Look for Clues & Predict</p>
+          <p class="text-sm text-[var(--ink)]">“Communications from friends/relatives who migrated” is a classic trigger for <span class="font-bold">Chain Migration</span>. Predict the concept before reading the choices.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / Reminders -->
+    <footer class="text-center print-break" aria-labelledby="final-reminders-title">
+      <h2 id="final-reminders-title" class="text-3xl font-bold text-[var(--ink)] mb-6">Final Reminders</h2>
+      <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+        <ul class="space-y-4 text-left text-lg text-[var(--sky)] list-none">
+          <li class="flex items-start"><span class="mr-3 text-2xl" aria-hidden="true">✅</span> <div><span class="font-bold text-[var(--ink)]">Be Active:</span> Underline, annotate, and cross off. Your pencil is a thinking tool.</div></li>
+          <li class="flex items-start"><span class="mr-3 text-2xl" aria-hidden="true">✅</span> <div><span class="font-bold text-[var(--ink)]">Trust Your Prep:</span> A hard item is hard for everyone. Make an educated guess and move on.</div></li>
+          <li class="flex items-start"><span class="mr-3 text-2xl" aria-hidden="true">✅</span> <div><span class="font-bold text-[var(--ink)]">Think Spatially:</span> Always ask the “why of where.” Hunt for patterns, connections, and relationships.</div></li>
+        </ul>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Chart.js donut for P.O.E.
+      const ctx = document.getElementById('poeChart');
+      if (ctx) {
+        new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+            labels: ['Chance of Success with P.O.E.', 'Incorrect Options'],
+            datasets: [{
+              data: [50, 50],
+              backgroundColor: ['#48CAE4', '#e5e7eb'], // aqua + gray-200
+              borderColor: ['#0077B6', '#cbd5e1'],
+              borderWidth: 2,
+              hoverOffset: 6
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { display: false },
+              title: {
+                display: true,
+                text: 'Boost Your Odds from 20% to 50% with Elimination',
+                color: '#004E89',
+                font: { size: 14, weight: 'bold' }
+              },
+              tooltip: {
+                callbacks: {
+                  title: (items) => items[0].label
+                }
+              }
+            },
+            cutout: '60%'
+          }
+        });
+      }
+
+      // Export PNG
+      const btn = document.getElementById('downloadPng');
+      const target = document.getElementById('infographic');
+      if (btn && target) {
+        btn.addEventListener('click', async () => {
+          btn.disabled = true;
+          btn.textContent = 'Rendering...';
+          try {
+            const canvas = await html2canvas(target, { scale: 2, backgroundColor: '#FFFFFF' });
+            const dataURL = canvas.toDataURL('image/png');
+            const link = document.createElement('a');
+            const ts = new Date().toISOString().slice(0,10);
+            link.download = `APHG-MCQ-Infographic-${ts}.png`;
+            link.href = dataURL;
+            link.click();
+          } finally {
+            btn.disabled = false;
+            btn.textContent = 'Download PNG';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
